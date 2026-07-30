@@ -1,0 +1,29 @@
+# Python byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest / Coverage / Caches
+.pytest_cache/
+.coverage
+htmlcov/
+cache/
+
+# Environments & Secrets
+.env
+.venv
+venv/
+ENV/
+env/
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Output JSON files generated during manual/test runs
+output_*.json
+my_test_output.json
+probe_out.txt
+prescreener.zip
