@@ -1,0 +1,148 @@
+{
+  "patient_id": "P-3098",
+  "as_of_date": "2026-07-01",
+  "candidate_trials_count": 30,
+  "report": [
+    {
+      "nct_id": "NCT05168605",
+      "brief_title": "Assessing the Efficacy of Targeted Home Visits in the Management of Chronic Conditions",
+      "overall_status": "RECRUITING",
+      "criterion_results": {
+        "age": {
+          "state": "SUPPORTED",
+          "explanation": "Patient age 59 is within required window [18.0, 60.0].",
+          "citations": []
+        },
+        "trial_recruiting_status": {
+          "state": "SUPPORTED",
+          "explanation": "Trial is currently RECRUITING.",
+          "citations": []
+        },
+        "hba1c": {
+          "state": "SUPPORTED",
+          "explanation": "Patient HbA1c 9.7% (2026-05-31) satisfies inclusion criterion: 'HbA1c \u2264 9.9%'. Older readings not used (most-recent-wins rule): 8.8% (2024-07-07) [6ca6d77f-ee8c-5dfa-a555-dc599a99f8f7].",
+          "citations": [
+            "9ddf153d-54aa-5ce2-b5d5-ba1d880290c9",
+            "HbA1c \u2264 9.9%"
+          ]
+        },
+        "egfr": {
+          "state": "UNKNOWN",
+          "explanation": "eGFR not present in patient record (listed in record_quality.missing_expected_domains). Absence is not a pass or fail.",
+          "citations": []
+        },
+        "current_diabetes_medications": {
+          "state": "UNKNOWN",
+          "explanation": "No diabetes medication rule found in trial eligibility text. Absence of a rule is not permission to proceed.",
+          "citations": []
+        },
+        "other_requirements": {
+          "state": "REQUIRES_CLINICAL_REVIEW",
+          "explanation": "1 other requirement(s) present; preserved verbatim for human review.",
+          "citations": [
+            "Written consent required"
+          ]
+        }
+      },
+      "human_review_required": true,
+      "selection_tier": "clean",
+      "is_fallback": false,
+      "not_supported_criteria": [],
+      "summary": "Candidate trial for coordinator review. Criteria met: age, trial_recruiting_status, hba1c. Cannot evaluate (data absent): egfr, current_diabetes_medications. Requires clinical review: other_requirements."
+    },
+    {
+      "nct_id": "NCT05844644",
+      "brief_title": "The Effects of the GOLO for Life\u00ae Plan With Release Supplement on Glycemic Control and Weight in Overweight and Obese Adults With Prediabetes or Type 2 Diabetes",
+      "overall_status": "RECRUITING",
+      "criterion_results": {
+        "age": {
+          "state": "SUPPORTED",
+          "explanation": "Patient age 59 is within required window [18.0, 75.0].",
+          "citations": []
+        },
+        "trial_recruiting_status": {
+          "state": "SUPPORTED",
+          "explanation": "Trial is currently RECRUITING.",
+          "citations": []
+        },
+        "hba1c": {
+          "state": "SUPPORTED",
+          "explanation": "Patient HbA1c 9.7% (2026-05-31) satisfies inclusion criterion: 'HbA1c \u2264 9.9%'. Older readings not used (most-recent-wins rule): 8.8% (2024-07-07) [6ca6d77f-ee8c-5dfa-a555-dc599a99f8f7].",
+          "citations": [
+            "9ddf153d-54aa-5ce2-b5d5-ba1d880290c9",
+            "HbA1c \u2264 9.9%"
+          ]
+        },
+        "egfr": {
+          "state": "UNKNOWN",
+          "explanation": "eGFR not present in patient record (listed in record_quality.missing_expected_domains). Absence is not a pass or fail.",
+          "citations": []
+        },
+        "current_diabetes_medications": {
+          "state": "UNKNOWN",
+          "explanation": "No diabetes medication rule found in trial eligibility text. Absence of a rule is not permission to proceed.",
+          "citations": []
+        },
+        "other_requirements": {
+          "state": "REQUIRES_CLINICAL_REVIEW",
+          "explanation": "1 other requirement(s) present; preserved verbatim for human review.",
+          "citations": [
+            "Written consent required"
+          ]
+        }
+      },
+      "human_review_required": true,
+      "selection_tier": "clean",
+      "is_fallback": false,
+      "not_supported_criteria": [],
+      "summary": "Candidate trial for coordinator review. Criteria met: age, trial_recruiting_status, hba1c. Cannot evaluate (data absent): egfr, current_diabetes_medications. Requires clinical review: other_requirements."
+    },
+    {
+      "nct_id": "NCT06003153",
+      "brief_title": "GLUCOSE-MGH: Genetic Links Understood Through Challenge With Oral Semaglutide Exposure at MGH",
+      "overall_status": "RECRUITING",
+      "criterion_results": {
+        "age": {
+          "state": "SUPPORTED",
+          "explanation": "Patient age 59 is within required window [18.0, 65.0].",
+          "citations": []
+        },
+        "trial_recruiting_status": {
+          "state": "SUPPORTED",
+          "explanation": "Trial is currently RECRUITING.",
+          "citations": []
+        },
+        "hba1c": {
+          "state": "SUPPORTED",
+          "explanation": "Patient HbA1c 9.7% (2026-05-31) satisfies inclusion criterion: 'HbA1c \u2264 9.9%'. Older readings not used (most-recent-wins rule): 8.8% (2024-07-07) [6ca6d77f-ee8c-5dfa-a555-dc599a99f8f7].",
+          "citations": [
+            "9ddf153d-54aa-5ce2-b5d5-ba1d880290c9",
+            "HbA1c \u2264 9.9%"
+          ]
+        },
+        "egfr": {
+          "state": "UNKNOWN",
+          "explanation": "eGFR not present in patient record (listed in record_quality.missing_expected_domains). Absence is not a pass or fail.",
+          "citations": []
+        },
+        "current_diabetes_medications": {
+          "state": "UNKNOWN",
+          "explanation": "No diabetes medication rule found in trial eligibility text. Absence of a rule is not permission to proceed.",
+          "citations": []
+        },
+        "other_requirements": {
+          "state": "REQUIRES_CLINICAL_REVIEW",
+          "explanation": "1 other requirement(s) present; preserved verbatim for human review.",
+          "citations": [
+            "Written consent required"
+          ]
+        }
+      },
+      "human_review_required": true,
+      "selection_tier": "clean",
+      "is_fallback": false,
+      "not_supported_criteria": [],
+      "summary": "Candidate trial for coordinator review. Criteria met: age, trial_recruiting_status, hba1c. Cannot evaluate (data absent): egfr, current_diabetes_medications. Requires clinical review: other_requirements."
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "patient_id": "P-3098",
+  "as_of_date": "2026-07-01",
+  "candidate_trials_count": 30,
+  "report": [
+    {
+      "nct_id": "NCT07399678",
+      "brief_title": "Study of ALV-100 to Assess Safety, Tolerability, and PK/PD in Overweight/Obese Participants With or Without T2D",
+      "overall_status": "RECRUITING",
+      "criterion_results": {
+        "age": {
+          "state": "SUPPORTED",
+          "explanation": "Patient age 59 is within required window [18.0, 65.0].",
+          "citations": []
+        },
+        "trial_recruiting_status": {
+          "state": "SUPPORTED",
+          "explanation": "Trial is currently RECRUITING.",
+          "citations": []
+        },
+        "hba1c": {
+          "state": "REQUIRES_CLINICAL_REVIEW",
+          "explanation": "HbA1c threshold uses mmol/mol units; unit conversion required before evaluation.",
+          "citations": [
+            "Hemoglobin A1c (HbA1c) between 6.5 % and 9.0% (equivalent to 48-75 mmol/mol), both inclusive, at Screening."
+          ]
+        },
+        "egfr": {
+          "state": "UNKNOWN",
+          "explanation": "eGFR not present in patient record (listed in record_quality.missing_expected_domains). Absence is not a pass or fail.",
+          "citations": []
+        },
+        "current_diabetes_medications": {
+          "state": "SUPPORTED",
+          "explanation": "Patient's active medications satisfy all trial medication criteria.",
+          "citations": [
+            "f6b0d5c3-7fa0-5806-85ea-75c4a8992763",
+            "Glycemic control managed by diet and exercise alone or by stable treatment with metformin and/or sodium-glucose cotransporter 2 inhibitors (SGLT-2i), with no dose changes within 3 months prior to Screening."
+          ]
+        },
+        "other_requirements": {
+          "state": "REQUIRES_CLINICAL_REVIEW",
+          "explanation": "20 other requirement(s) present; preserved verbatim for human review.",
+          "citations": [
+            "Adult male and female participants, aged 18 to 65 years, inclusive, at the time of signing the informed consent form",
+            "Body mass index between 27.0 to 39.9 kg/m2 at Screening, both inclusive; overweight should be due to excess adipose tissue, as judged by the Investigator.",
+            "Have a stable body weight (< 5.0 kg/11 lbs self-reported change) within 90 days prior to Screening",
+            "Females must be surgically sterile (by means of bilateral salpingectomy, hysterectomy or bilateral oophorectomy) or be post-menopausal (defined as spontaneous cessation of menses for at least 1 year prior to Screening).",
+            "Females who are post-menopausal and < 55 years must have a follicle-stimulating hormone level > 40 IU/L at Screening.",
+            "Males with female partners of child-bearing potential must be willing to practice abstinence or must agree to use condom as contraception throughout the duration of the study.",
+            "This criterion may be waived for male participants who have had a documented successful vasectomy > 6 months before signing the ICF.",
+            "Diagnosis of Type 2 Diabetes for at least 180 days prior to Screening.",
+            "History or presence of any clinically relevant respiratory, metabolic (including dyslipidemia, however screening total cholesterol below or equal to 302 mg/dL (7.8 mmol/L) and/or screening triglyceride below or equal to 500 mg/dL (5.65 mmol/L) is accepted), renal, hepatic, gastrointestinal, endocrinological conditions (except conditions associated with type 2 diabetes in Part B) at the discretion of the Investigator.",
+            "Participants with a family or personal history of medullary thyroid carcinoma or multiple endocrine neoplasia type 2 or a personal history of nonfamilial medullary thyroid carcinoma.",
+            "Current or history of chronic or acute pancreatitis.",
+            "Obesity caused by known endocrinologic disorders (e.g., Cushing syndrome) or monogenetic or syndromic forms of obesity (for example, Melanocortin 4 Receptor deficiency or Prader Willi Syndrome).",
+            "History of major depressive disorder or other severe psychiatric disorder (for example, schizophrenia, bipolar disorder, or anxiety disorder).",
+            "Lifetime history of a suicide attempt or of any suicidal behavior by endorsement of (answered yes to) any of the items in the suicidal behavior section on the Columbia Suicide Severity Rating Scale (C-SSRS) at Screening.",
+            "Systolic blood pressure \u2265 140 mm Hg or diastolic blood pressure \u2265 90 mm Hg at Screening.",
+            "History of or current cardiovascular disease, including but not limited to stable and unstable angina, myocardial infarction, congestive heart failure, transient ischemic attack, stroke, clinically significant arrhythmias and conduction disorders or venous thromboembolism.",
+            "Fasting plasma glucose (FPG) > 270 mg/dL (15.0 mmol/L) at Screening.",
+            "Proliferative retinopathy or maculopathy as judged by the investigator based on a recent (within1.5 years from Screening) ophthalmologic examination.",
+            "Severe neuropathy as judged by the investigator.",
+            "History of severe hypoglycemia or hypoglycemic unawareness as judged by the investigator."
+          ]
+        }
+      },
+      "human_review_required": true,
+      "selection_tier": "clean",
+      "is_fallback": false,
+      "not_supported_criteria": [],
+      "summary": "Candidate trial for coordinator review. Criteria met: age, trial_recruiting_status, current_diabetes_medications. Cannot evaluate (data absent): egfr. Requires clinical review: hba1c, other_requirements."
+    },
+    {
+      "nct_id": "NCT05168605",
+      "brief_title": "Assessing the Efficacy of Targeted Home Visits in the Management of Chronic Conditions",
+      "overall_status": "RECRUITING",
+      "criterion_results": {
+        "age": {
+          "state": "SUPPORTED",
+          "explanation": "Patient age 59 is within required window [18.0, 60.0].",
+          "citations": []
+        },
+        "trial_recruiting_status": {
+          "state": "SUPPORTED",
+          "explanation": "Trial is currently RECRUITING.",
+          "citations": []
+        },
+        "hba1c": {
+          "state": "SUPPORTED",
+          "explanation": "Patient HbA1c 9.7% (2026-05-31) satisfies inclusion criterion: 'Hemoglobin A1C>8 in last 6 months (based on medical record)'. Older readings not used (most-recent-wins rule): 8.8% (2024-07-07) [6ca6d77f-ee8c-5dfa-a555-dc599a99f8f7].",
+          "citations": [
+            "9ddf153d-54aa-5ce2-b5d5-ba1d880290c9",
+            "Hemoglobin A1C>8 in last 6 months (based on medical record)"
+          ]
+        },
+        "egfr": {
+          "state": "UNKNOWN",
+          "explanation": "eGFR not present in patient record (listed in record_quality.missing_expected_domains). Absence is not a pass or fail.",
+          "citations": []
+        },
+        "current_diabetes_medications": {
+          "state": "UNKNOWN",
+          "explanation": "No diabetes medication rule found in trial eligibility text. Absence of a rule is not permission to proceed.",
+          "citations": []
+        },
+        "other_requirements": {
+          "state": "REQUIRES_CLINICAL_REVIEW",
+          "explanation": "7 other requirement(s) present; preserved verbatim for human review.",
+          "citations": [
+            "Adult patients ages 18-60",
+            "Spanish or English speaking",
+            "Diagnosis of HTN or BP >140/90 in last 3 months (based on medical record)",
+            "Not pregnant",
+            "Current oral steroid use",
+            "History of solid organ transplant",
+            "Language other than English or Spanish"
+          ]
+        }
+      },
+      "human_review_required": true,
+      "selection_tier": "clean",
+      "is_fallback": false,
+      "not_supported_criteria": [],
+      "summary": "Candidate trial for coordinator review. Criteria met: age, trial_recruiting_status, hba1c. Cannot evaluate (data absent): egfr, current_diabetes_medications. Requires clinical review: other_requirements."
+    },
+    {
+      "nct_id": "NCT06003153",
+      "brief_title": "GLUCOSE-MGH: Genetic Links Understood Through Challenge With Oral Semaglutide Exposure at MGH",
+      "overall_status": "RECRUITING",
+      "criterion_results": {
+        "age": {
+          "state": "SUPPORTED",
+          "explanation": "Patient age 59 is within required window [18.0, 65.0].",
+          "citations": []
+        },
+        "trial_recruiting_status": {
+          "state": "SUPPORTED",
+          "explanation": "Trial is currently RECRUITING.",
+          "citations": []
+        },
+        "hba1c": {
+          "state": "UNKNOWN",
+          "explanation": "No HbA1c threshold found in trial eligibility text.",
+          "citations": []
+        },
+        "egfr": {
+          "state": "UNKNOWN",
+          "explanation": "eGFR not present in patient record (listed in record_quality.missing_expected_domains). Absence is not a pass or fail.",
+          "citations": []
+        },
+        "current_diabetes_medications": {
+          "state": "SUPPORTED",
+          "explanation": "Patient's active medications satisfy all trial medication criteria.",
+          "citations": [
+            "f6b0d5c3-7fa0-5806-85ea-75c4a8992763",
+            "Currently taking medications or intending to take medications for diabetes"
+          ]
+        },
+        "other_requirements": {
+          "state": "REQUIRES_CLINICAL_REVIEW",
+          "explanation": "11 other requirement(s) present; preserved verbatim for human review.",
+          "citations": [
+            "Males or non-pregnant females",
+            "Ages 18-65 (inclusive)",
+            "Able/willing to give consent",
+            "Span the metabolic range between normal glycemia and pre-diabetes (fasting glucose of 100-125 mg/dL based on chart review of existing laboratory data)",
+            "Currently taking medications or intending to take medications that affect glycemic parameters, such as glucocorticoids, growth hormone, or fluoroquinolones",
+            "Personal history of intestinal malabsorption, bariatric surgery, celiac disease, gallbladder disease, or pancreatitis",
+            "Personal or family history of medullary thyroid cancer or multiple endocrine neoplasia type 2",
+            "History of cirrhosis and/or aspartate aminotransferase or alanine aminotransferase more than 3x upper limit of normal",
+            "Dietary restrictions preventing consumption of a MMTT",
+            "Women who are pregnant, nursing, or at risk of becoming pregnant",
+            "Participation in other interventional studies during the current study"
+          ]
+        }
+      },
+      "human_review_required": true,
+      "selection_tier": "clean",
+      "is_fallback": false,
+      "not_supported_criteria": [],
+      "summary": "Candidate trial for coordinator review. Criteria met: age, trial_recruiting_status, current_diabetes_medications. Cannot evaluate (data absent): hba1c, egfr. Requires clinical review: other_requirements."
+    }
+  ]
+}

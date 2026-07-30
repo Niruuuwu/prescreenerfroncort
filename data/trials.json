@@ -1,0 +1,42 @@
+[
+  {
+    "nct_id": "NCT04100001",
+    "title": "Efficacy of Novel GLP-1/GIP Dual Agonist in Type 2 Diabetes",
+    "overall_status": "RECRUITING",
+    "minimum_age_years": 18,
+    "maximum_age_years": 75,
+    "eligibility_text": "INCLUSION CRITERIA:\nDiagnosis of type 2 diabetes mellitus confirmed by a physician.\nHbA1c between 6.5% and 10.0% at screening visit.\neGFR >= 45 mL/min/1.73m² at screening.\nBMI 25 to 40 kg/m².\n\nEXCLUSION CRITERIA:\nCurrent use of insulin therapy.\nCurrent use of GLP-1 receptor agonist within 3 months of screening.\nSevere hepatic impairment.\nWillingness to attend monthly clinic visits is required."
+  },
+  {
+    "nct_id": "NCT04100002",
+    "title": "Once-Weekly SGLT2 Inhibitor Formulation in Adults with T2DM",
+    "overall_status": "RECRUITING",
+    "minimum_age_years": 30,
+    "maximum_age_years": null,
+    "eligibility_text": "INCLUSION CRITERIA:\nType 2 diabetes mellitus diagnosis (SNOMED 44054006) for at least 12 months.\nHbA1c between 7.5% and 11.0% at screening.\nBMI >= 27 kg/m².\n\nEXCLUSION CRITERIA:\nSevere renal impairment defined as eGFR < 30 mL/min/1.73m².\nCurrent treatment with SGLT2 inhibitor.\nHistory of recurrent urinary tract infections.\nParticipation in another clinical trial within 30 days."
+  },
+  {
+    "nct_id": "NCT04100003",
+    "title": "Oral Semaglutide vs Empagliflozin in Overweight T2DM Patients",
+    "overall_status": "RECRUITING",
+    "minimum_age_years": 18,
+    "maximum_age_years": 80,
+    "eligibility_text": "INCLUSION CRITERIA:\nConfirmed type 2 diabetes mellitus.\nHbA1c 7.0% to 12.0% at baseline.\neGFR >= 30 mL/min/1.73m².\n\nEXCLUSION CRITERIA:\nCurrent treatment with GLP-1 agonist or dual GIP/GLP-1 agonist.\nHistory of severe hypoglycaemia in the past 12 months.\nUncontrolled hypertension (>160/100 mmHg).\nSelf-monitoring of blood glucose willingness required."
+  },
+  {
+    "nct_id": "NCT04100004",
+    "title": "Completed Phase III Metformin Add-On Study",
+    "overall_status": "COMPLETED",
+    "minimum_age_years": 18,
+    "maximum_age_years": 70,
+    "eligibility_text": "INCLUSION CRITERIA:\nType 2 diabetes. HbA1c between 7.0% and 10.0%.\n\nEXCLUSION CRITERIA:\nContraindication to metformin."
+  },
+  {
+    "nct_id": "NCT04100005",
+    "title": "Paediatric and Young Adult T2DM Registry",
+    "overall_status": "RECRUITING",
+    "minimum_age_years": 10,
+    "maximum_age_years": 25,
+    "eligibility_text": "INCLUSION CRITERIA:\nType 2 diabetes diagnosis before age 25.\nHbA1c > 6.5%.\n\nEXCLUSION CRITERIA:\nAge over 25 years at enrolment."
+  }
+]
