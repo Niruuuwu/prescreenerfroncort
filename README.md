@@ -9,12 +9,12 @@ A node-graph clinical agent (built with **LangGraph**) that reconciles dated pat
 
 Every criterion result cites a `source_id` from the raw patient JSON; every unknown is declared; missing data is never turned into a fake pass or fail.
 
-- 📖 **Complete Presentation & Project Guide**: See [niru.md](./niru.md) for an all-in-one guide to explain this project.
-- 📐 **System Architecture & Diagrams**: See [ARCHITECTURE.md](./ARCHITECTURE.md) for complete system design specs, Mermaid diagrams, and data flow.
-- 🔬 **Research & Design Foundation**: See [RESEARCH.md](./RESEARCH.md) for problem framing, data schema, and literature grounding (TrialGPT, Cureus 2024).  
-- 🤖 **AI Design & Trade-off Notes**: See [AI_USAGE.md](./AI_USAGE.md) for AI-driven iteration decisions, prompt injection audits, and time-constraint evaluation trade-offs.  
-- 📊 **Batch Pre-Screening Report**: See [summary_all_patients.md](./summary_all_patients.md) for results across all 15 dataset patients.  
-- 💻 **Execution Logs**: See [DEMO_RUNS.md](./DEMO_RUNS.md) for terminal execution logs and outputs.
+- **Complete Presentation & Project Guide**: See [niru.md](./niru.md) for an all-in-one guide to explain this project.
+- **System Architecture & Diagrams**: See [ARCHITECTURE.md](./ARCHITECTURE.md) for complete system design specs, Mermaid diagrams, and data flow.
+- **Research & Design Foundation**: See [RESEARCH.md](./RESEARCH.md) for problem framing, data schema, and literature grounding (TrialGPT, Cureus 2024).  
+- **AI Design & Trade-off Notes**: See [AI_USAGE.md](./AI_USAGE.md) for AI-driven iteration decisions, prompt injection audits, and time-constraint evaluation trade-offs.  
+- **Batch Pre-Screening Report**: See [summary_all_patients.md](./summary_all_patients.md) for results across all 15 dataset patients.  
+- **Execution Logs**: See [DEMO_RUNS.md](./DEMO_RUNS.md) for terminal execution logs and outputs.
 
 ---
 
@@ -104,10 +104,10 @@ START → filter_structured → retrieve_evidence → evaluate_criteria → gene
 
 | Node | LLM? | Output |
 |---|---|---|
-| `filter_structured` | ✗ (Pure Python) | `candidate_trials` (hard age filter, soft recruiting status annotation) |
-| `retrieve_evidence` | ✓ (1 call / trial) | `retrieved_evidence` (verbatim extraction of HbA1c, eGFR, meds spans) |
-| `evaluate_criteria` | ✗ (Pure Python) | `criterion_results`, `human_review_required` (5 spec-mandated states + citations) |
-| `generate_report`   | ✗ (Pure Python) | `final_report` (two-pool ranking, `selection_tier: clean/fallback` & `is_fallback: False/True`, summary, `evidence_leverage_summary`) |
+| `filter_structured` | No (Pure Python) | `candidate_trials` (hard age filter, soft recruiting status annotation) |
+| `retrieve_evidence` | Yes (1 call / trial) | `retrieved_evidence` (verbatim extraction of HbA1c, eGFR, meds spans) |
+| `evaluate_criteria` | No (Pure Python) | `criterion_results`, `human_review_required` (5 spec-mandated states + citations) |
+| `generate_report`   | No (Pure Python) | `final_report` (two-pool ranking, `selection_tier: clean/fallback` & `is_fallback: False/True`, summary, `evidence_leverage_summary`) |
 
 ```mermaid
 flowchart TD
