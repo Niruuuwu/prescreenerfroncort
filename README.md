@@ -10,6 +10,7 @@ A node-graph clinical agent (built with **LangGraph**) that reconciles dated pat
 Every criterion result cites a `source_id` from the raw patient JSON; every unknown is declared; missing data is never turned into a fake pass or fail.
 
 - 📖 **Complete Presentation & Project Guide**: See [niru.md](./niru.md) for an all-in-one guide to explain this project.
+- 📐 **System Architecture & Diagrams**: See [ARCHITECTURE.md](./ARCHITECTURE.md) for complete system design specs, Mermaid diagrams, and data flow.
 - 🔬 **Research & Design Foundation**: See [RESEARCH.md](./RESEARCH.md) for problem framing, data schema, and literature grounding (TrialGPT, Cureus 2024).  
 - 🤖 **AI Design & Trade-off Notes**: See [AI_USAGE.md](./AI_USAGE.md) for AI-driven iteration decisions, prompt injection audits, and time-constraint evaluation trade-offs.  
 - 📊 **Batch Pre-Screening Report**: See [summary_all_patients.md](./summary_all_patients.md) for results across all 15 dataset patients.  
