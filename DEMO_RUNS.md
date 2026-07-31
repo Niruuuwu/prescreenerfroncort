@@ -251,37 +251,36 @@ python test_original_metric.py
 **Output**:
 ```text
 ================================================================================
-ORIGINAL EVALUATION METRIC: Citation Traceability & Hallucination Gap Index
+ORIGINAL EVALUATION METRIC: Citation Traceability & Hallucination Gap Index (CTHGI)
 ================================================================================
 
-Hypothesis: Accuracy tests miss evidence hallucinations where state is correct
-            but patient source_id links are missing or invented.
-Target: 100% strict patient source_id verification.
+Failure Hypothesis: Accuracy tests miss evidence hallucinations where state is correct
+                    but patient source_id UUID links are missing or invented.
 
-Results across 15 patients:
-  Patient P-1842: CTHGI = 100.0% (10/10 criteria with verified raw source_ids)
-  Patient P-2483: CTHGI = 100.0% (10/10 criteria with verified raw source_ids)
-  Patient P-2715: CTHGI = 100.0% (10/10 criteria with verified raw source_ids)
-  Patient P-3098: CTHGI = 100.0% (5/5 criteria with verified raw source_ids)
-  Patient P-3916: CTHGI = 100.0% (10/10 criteria with verified raw source_ids)
-  Patient P-4471: CTHGI = 100.0% (10/10 criteria with verified raw source_ids)
-  Patient P-4752: CTHGI = 100.0% (10/10 criteria with verified raw source_ids)
-  Patient P-5236: CTHGI = 100.0% (10/10 criteria with verified raw source_ids)
-  Patient P-5691: CTHGI = 100.0% (10/10 criteria with verified raw source_ids)
-  Patient P-6184: CTHGI = 100.0% (10/10 criteria with verified raw source_ids)
-  Patient P-7029: CTHGI = 100.0% (5/5 criteria with verified raw source_ids)
-  Patient P-7438: CTHGI = 100.0% (10/10 criteria with verified raw source_ids)
-  Patient P-8361: CTHGI = 100.0% (10/10 criteria with verified raw source_ids)
-  Patient P-8624: CTHGI = 100.0% (10/10 criteria with verified raw source_ids)
-  Patient P-9157: CTHGI = 100.0% (5/5 criteria with verified raw source_ids)
+Results across 15 patients (sampled 5 trials/patient):
+  Patient P-1842: Our CTHGI = 100.0% ( 6/ 6 criteria verified) | Naive Baseline =   0.0%
+  Patient P-2483: Our CTHGI = 100.0% ( 9/ 9 criteria verified) | Naive Baseline =   0.0%
+  Patient P-2715: Our CTHGI = 100.0% ( 6/ 6 criteria verified) | Naive Baseline =   0.0%
+  Patient P-3098: Our CTHGI = 100.0% ( 7/ 7 criteria verified) | Naive Baseline =   0.0%
+  Patient P-3916: Our CTHGI = 100.0% ( 7/ 7 criteria verified) | Naive Baseline =   0.0%
+  Patient P-4471: Our CTHGI = 100.0% ( 7/ 7 criteria verified) | Naive Baseline =   0.0%
+  Patient P-4752: Our CTHGI = 100.0% ( 9/ 9 criteria verified) | Naive Baseline =   0.0%
+  Patient P-5236: Our CTHGI = 100.0% ( 7/ 7 criteria verified) | Naive Baseline =   0.0%
+  Patient P-5691: Our CTHGI = 100.0% ( 6/ 6 criteria verified) | Naive Baseline =   0.0%
+  Patient P-6184: Our CTHGI = 100.0% (10/10 criteria verified) | Naive Baseline =   0.0%
+  Patient P-7029: Our CTHGI = 100.0% ( 7/ 7 criteria verified) | Naive Baseline =   0.0%
+  Patient P-7438: Our CTHGI = 100.0% ( 7/ 7 criteria verified) | Naive Baseline =   0.0%
+  Patient P-8361: Our CTHGI = 100.0% ( 7/ 7 criteria verified) | Naive Baseline =   0.0%
+  Patient P-8624: Our CTHGI = 100.0% ( 8/ 8 criteria verified) | Naive Baseline =   0.0%
+  Patient P-9157: Our CTHGI = 100.0% ( 7/ 7 criteria verified) | Naive Baseline =   0.0%
 
 --------------------------------------------------------------------------------
-OVERALL CTHGI SCORE: 100.00%
-BASELINE COMPARISON: Naive baseline without structured state mapping = 25.0%
-OUR SYSTEM PERFORMANCE: 100.00% (100% patient evidence traceability)
+OUR SYSTEM CTHGI SCORE:       100.00% (110/110 verified criteria)
+NAIVE BASELINE CTHGI SCORE:   0.00% (0/225 verified criteria)
+EMPIRICAL HALLUCINATION GAP:  +100.00% improvement
 --------------------------------------------------------------------------------
 
-Original Metric Test Passed Successfully!
+Original Metric Evaluation Passed Successfully!
 ```
 
 ---

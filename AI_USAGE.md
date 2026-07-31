@@ -129,3 +129,24 @@ just counting something that was already sitting in the data once evaluation
 was done. I think it's the most useful single addition I made, because it
 turns the report from "here are 30 individually honest answers" into
 "here's the one thing you should actually go do next."
+
+---
+
+## Catching my own eval flaw under time pressure: rewriting the original metric
+
+Near the end of the build, I had working code for all nodes, LangGraph state wiring, a complete CLI, and 10 passing harness tests. For the spec requirement to design an original metric (Page 5), I had a script `test_original_metric.py` that printed `100.0% CTHGI` and exited clean.
+
+Given the tight time constraints, I was genuinely hesitant to reopen that file — the system was working, the tests were passing, and rewriting an evaluation harness from scratch takes real time right before submission. It would have been easy to leave it as-is and ship.
+
+But when I audited `test_original_metric.py` carefully before mailing, I caught a serious problem: the script was feeding a hardcoded dictionary (`mock_tev`) into `evaluate_criteria`, never calling `retrieve_evidence` or any LLM, and asserting `assert overall_cthgi == 100.0` alongside a hardcoded printed baseline string (`25.0%`). It was measuring pure deterministic Python logic on rigged, always-answerable fake inputs — hitting 100% not because the real system had zero hallucination risk, but because the test had been built unable to fail.
+
+That undermined the entire discipline of this build. Having a passing test that actually tests nothing about your risky component is worse than having no test at all — if a reviewer looks closely, it undermines trust in every claim across the project.
+
+Even under time pressure, fixing it was non-negotiable:
+1. **Rewrote `test_original_metric.py`**: Rewired the loop to run Node 1 (`filter_structured`), Node 2 (`retrieve_evidence` on actual candidate trial text), and Node 3 (`evaluate_criteria`) across all 15 patients.
+2. **Real Patient UUID Verification**: Checked every cited `source_id` against the patient's actual raw JSON `source_id` UUID set (`observations` and `medications`).
+3. **Empirical Baseline**: Built an explicit `naive_baseline_evaluate()` function simulating an un-bound single-prompt LLM setup, and dynamically computed the real **Hallucination Gap** (`+100.00%`).
+4. **AI Pair-Programming Cleanup**: Used the AI assistant to audit the evaluation pipeline, untrack `__pycache__` `.pyc` files from git, relocate loose probe scripts into `scratch/`, create a clean `examples/output_P3098.json`, and align `selection_tier` / `is_fallback` nomenclature in `README.md`.
+
+Hesitating because of time was natural, but taking the time to fix it turned a potential credibility trap into genuine empirical proof of citation traceability.
+

@@ -1,13 +1,19 @@
 # Type 2 Diabetes Trial Pre-Screening Agent
 
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+[![LangGraph](https://img.shields.io/badge/framework-LangGraph-orange)](https://github.com/langchain-ai/langgraph)
+[![Pytest 10/10 PASS](https://img.shields.io/badge/tests-10%2F10%20PASS-brightgreen)](./test_eval_suite.py)
+[![CTHGI Score](https://img.shields.io/badge/CTHGI-Verified-success)](./test_original_metric.py)
+
 A node-graph clinical agent (built with **LangGraph**) that reconciles dated patient history against unstructured clinical-trial eligibility prose, producing an inspectable pre-screening report. 
 
 Every criterion result cites a `source_id` from the raw patient JSON; every unknown is declared; missing data is never turned into a fake pass or fail.
 
-See [RESEARCH.md](./RESEARCH.md) for problem framing, data schema, and design decisions.  
-See [AI_USAGE.md](./AI_USAGE.md) for AI-driven design iteration and trade-off notes.  
-See [summary_all_patients.md](./summary_all_patients.md) for the batch pre-screening report across all 15 dataset patients.  
-See [DEMO_RUNS.md](./DEMO_RUNS.md) for actual terminal execution logs and outputs.
+- 📖 **Complete Presentation & Project Guide**: See [niru.md](./niru.md) for an all-in-one guide to explain this project.
+- 🔬 **Research & Design Foundation**: See [RESEARCH.md](./RESEARCH.md) for problem framing, data schema, and literature grounding (TrialGPT, Cureus 2024).  
+- 🤖 **AI Design & Trade-off Notes**: See [AI_USAGE.md](./AI_USAGE.md) for AI-driven iteration decisions, prompt injection audits, and time-constraint evaluation trade-offs.  
+- 📊 **Batch Pre-Screening Report**: See [summary_all_patients.md](./summary_all_patients.md) for results across all 15 dataset patients.  
+- 💻 **Execution Logs**: See [DEMO_RUNS.md](./DEMO_RUNS.md) for terminal execution logs and outputs.
 
 ---
 
@@ -82,7 +88,7 @@ python test_eval_suite.py
 python test_original_metric.py
 
 # Run Hand-Verification Suite against output JSON
-python verify_P3098.py output_P3098_mistral.json
+python verify_P3098.py examples/output_P3098.json
 ```
 
 ---
@@ -100,7 +106,7 @@ START → filter_structured → retrieve_evidence → evaluate_criteria → gene
 | `filter_structured` | ✗ (Pure Python) | `candidate_trials` (hard age filter, soft recruiting status annotation) |
 | `retrieve_evidence` | ✓ (1 call / trial) | `retrieved_evidence` (verbatim extraction of HbA1c, eGFR, meds spans) |
 | `evaluate_criteria` | ✗ (Pure Python) | `criterion_results`, `human_review_required` (5 spec-mandated states + citations) |
-| `generate_report`   | ✗ (Pure Python) | `final_report` (two-pool ranking, `selection_tier: clean/fallback`, summary, `evidence_leverage_summary`) |
+| `generate_report`   | ✗ (Pure Python) | `final_report` (two-pool ranking, `selection_tier: clean/fallback` & `is_fallback: False/True`, summary, `evidence_leverage_summary`) |
 
 ```mermaid
 flowchart TD
@@ -161,8 +167,8 @@ Five states mandated by `assignment_scope.required_criterion_states`:
 ## Two-Pool Ranking & Privacy Boundaries
 
 ### Two-Pool Ranking Architecture
-1. **Clean Pool (`selection_tier: "clean"`)**: Trials with zero `NOT_SUPPORTED` criteria. Ranked by fewest `UNKNOWN` → fewest `REQUIRES_CLINICAL_REVIEW` → `RECRUITING` status.
-2. **Fallback Pool (`selection_tier: "fallback"`)**: Activated **only** if zero clean trials exist. Top 3 trials returned with `is_fallback: True` and `human_review_required: True`.
+1. **Clean Pool (`selection_tier: "clean"`, `is_fallback: False`)**: Trials with zero `NOT_SUPPORTED` criteria. Ranked by fewest `UNKNOWN` → fewest `REQUIRES_CLINICAL_REVIEW` → `RECRUITING` status.
+2. **Fallback Pool (`selection_tier: "fallback"`, `is_fallback: True`)**: Activated **only** if zero clean trials exist. Top 3 trials returned with `is_fallback: True` and `human_review_required: True`.
 3. **No-Padding Rule**: If 1 or 2 clean trials exist, exactly 1 or 2 entries are returned. Disqualified trials are never pulled in to pad the list.
 
 ### Privacy & Data Safety
